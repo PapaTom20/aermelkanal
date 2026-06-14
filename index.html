@@ -366,16 +366,40 @@ Mode verbindet Kontinente seit 2026.
 
 function choose(shirt){
 
+const betreff = "Ärmelkanal Hemdenauswahl";
+
+const text =
+`Hallo Vorstand,
+
+hiermit möchte ich meine Auswahl für das ÄRMELKANAL® Executive Birthday Program bestätigen.
+
+Gewähltes Hemd:
+${shirt}
+
+Mit freundlichen Grüßen
+
+Leonard`;
+
+const mailto =
+`mailto:info@aermelkanal.fun?subject=${encodeURIComponent(betreff)}&body=${encodeURIComponent(text)}`;
+
+window.location.href = mailto;
+
+setTimeout(() => {
+
 document.getElementById("selection").innerHTML =
 "Du hast <strong>" + shirt + "</strong> ausgewählt.";
 
-document.getElementById("success").style.display="block";
+document.getElementById("success").style.display = "block";
 
 document.getElementById("success").scrollIntoView({
 behavior:"smooth"
 });
 
+}, 500);
+
 }
+
 </script>
 
 </body>
