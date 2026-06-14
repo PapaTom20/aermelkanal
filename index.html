@@ -2,187 +2,379 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ärmelkanal – Premium-Hemdenabo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ÄRMELKANAL® – Premium Shirt Subscription Services</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f7fa;
-    color: #333;
+:root{
+--blue:#0b2341;
+--gold:#d4af37;
+--light:#f4f6f9;
+--text:#222;
 }
 
-header {
-    background: linear-gradient(135deg,#003366,#0066cc);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
-header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+body{
+font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:var(--light);
+color:var(--text);
+line-height:1.6;
 }
 
-header p {
-    font-size: 1.2em;
+.hero{
+background:linear-gradient(135deg,#07172b,#0d3c6d);
+color:white;
+padding:80px 20px;
+text-align:center;
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 30px;
+.logo{
+font-size:3rem;
+font-weight:800;
+letter-spacing:4px;
 }
 
-.shirts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 25px;
+.tagline{
+color:var(--gold);
+margin-top:10px;
+font-size:1.1rem;
 }
 
-.card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+.hero h2{
+margin-top:40px;
+font-size:2rem;
 }
 
-.card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+.hero p{
+max-width:800px;
+margin:15px auto;
+font-size:1.1rem;
 }
 
-.card h3 {
-    padding: 10px 15px 0;
+.container{
+max-width:1200px;
+margin:auto;
+padding:50px 20px;
 }
 
-.card p {
-    padding: 0 15px;
+.section-title{
+text-align:center;
+font-size:2rem;
+margin-bottom:40px;
+color:var(--blue);
 }
 
-.card button {
-    margin: 15px;
-    padding: 12px;
-    width: calc(100% - 30px);
-    border: none;
-    background: #0066cc;
-    color: white;
-    font-size: 1em;
-    border-radius: 8px;
-    cursor: pointer;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
-.card button:hover {
-    background: #004999;
+.card{
+background:white;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.12);
+transition:.2s;
 }
 
-#message {
-    display:none;
-    margin-top:40px;
-    background:#dff0d8;
-    border:1px solid #b2d8a7;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    font-size:1.3em;
+.card:hover{
+transform:translateY(-4px);
 }
 
-footer {
-    text-align:center;
-    padding:40px;
-    color:#666;
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+margin-bottom:10px;
+color:var(--blue);
+}
+
+.card p{
+font-size:.95rem;
+margin-bottom:15px;
+}
+
+.btn{
+width:100%;
+padding:14px;
+border:none;
+background:var(--blue);
+color:white;
+font-size:1rem;
+border-radius:10px;
+cursor:pointer;
+}
+
+.btn:hover{
+opacity:.92;
+}
+
+.packages{
+margin-top:70px;
+background:white;
+border-radius:16px;
+padding:30px;
+box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:14px;
+border-bottom:1px solid #ddd;
+text-align:left;
+}
+
+th{
+background:#f2f2f2;
+}
+
+.highlight{
+font-weight:bold;
+color:#0a7b29;
+}
+
+#success{
+display:none;
+margin-top:40px;
+background:#eaf9ea;
+border:2px solid #89c489;
+padding:30px;
+border-radius:16px;
+text-align:center;
+}
+
+#success h2{
+margin-bottom:15px;
+color:#0a7b29;
+}
+
+footer{
+margin-top:70px;
+background:#081626;
+color:#ddd;
+text-align:center;
+padding:40px 20px;
+}
+
+.small{
+font-size:.85rem;
+opacity:.75;
 }
 </style>
 </head>
-
 <body>
 
-<header>
-    <h1>👔 Ärmelkanal</h1>
-    <p>Der führende Premium-Hemden-Streamingdienst Europas</p>
-    <p><strong>Exklusiv für unseren Geburtstagskunden!</strong></p>
-</header>
+<section class="hero">
+
+<div class="logo">ÄRMELKANAL®</div>
+
+<div class="tagline">
+Connecting Sleeves Since 2026
+</div>
+
+<h2>Willkommen Leonard</h2>
+
+<p>
+Unsere Fashion-Analysten haben deinen Hemdenbestand sorgfältig untersucht.
+</p>
+
+<p>
+Das Ergebnis war eindeutig:
+Du benötigst dringend Zugang zum
+<strong>Ärmelkanal Executive Birthday Program™</strong>.
+</p>
+
+<p>
+Herzlichen Glückwunsch zum 24. Geburtstag.
+</p>
+
+</section>
 
 <div class="container">
 
-<h2>Willkommen!</h2>
+<h2 class="section-title">
+Die Kollektion 2026
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=1200" alt="">
+<div class="card-content">
+<h3>White Executive</h3>
+<p>Das klassische weiße Businesshemd. Für Karrieresprünge, Hochzeiten und seriöse Fotos.</p>
+<button class="btn" onclick="choose('White Executive')">Dieses Hemd wählen</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=1200" alt="">
+<div class="card-content">
+<h3>Blue Boardroom</h3>
+<p>Das farbige Businesshemd. Professionell, souverän und überraschend erwachsen.</p>
+<button class="btn" onclick="choose('Blue Boardroom')">Dieses Hemd wählen</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=1200" alt="">
+<div class="card-content">
+<h3>Weekend Commander</h3>
+<p>Für Freizeit, Freunde und entspannte Einsätze außerhalb des Büros.</p>
+<button class="btn" onclick="choose('Weekend Commander')">Dieses Hemd wählen</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200" alt="">
+<div class="card-content">
+<h3>Linen Riviera</h3>
+<p>Leinenhemd mit mediterranem Flair und maximaler Sommerkompetenz.</p>
+<button class="btn" onclick="choose('Linen Riviera')">Dieses Hemd wählen</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?w=1200" alt="">
+<div class="card-content">
+<h3>Stripe Authority</h3>
+<p>Streifen vermitteln Kompetenz. Wissenschaftlich nicht belegt. Gefühlt aber schon.</p>
+<button class="btn" onclick="choose('Stripe Authority')">Dieses Hemd wählen</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1200" alt="">
+<div class="card-content">
+<h3>Dot Prestige</h3>
+<p>Kleine Punkte. Große Wirkung. Der Klassiker für Menschen mit Stil.</p>
+<button class="btn" onclick="choose('Dot Prestige')">Dieses Hemd wählen</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1200" alt="">
+<div class="card-content">
+<h3>Wildcard Edition</h3>
+<p>Die Überraschungsoption. Selbst unsere Einkaufskommission kennt das Ergebnis noch nicht.</p>
+<button class="btn" onclick="choose('Wildcard Edition')">Dieses Hemd wählen</button>
+</div>
+</div>
+
+</div>
+
+<div class="packages">
+
+<h2 style="margin-bottom:20px;">Verfügbare Abomodelle</h2>
+
+<table>
+<tr>
+<th>Paket</th>
+<th>Monatspreis</th>
+</tr>
+
+<tr>
+<td>Basic</td>
+<td>49 €</td>
+</tr>
+
+<tr>
+<td>Premium</td>
+<td>89 €</td>
+</tr>
+
+<tr>
+<td>Executive Platinum</td>
+<td>149 €</td>
+</tr>
+
+<tr>
+<td class="highlight">Mama & Papa Birthday Edition</td>
+<td class="highlight">Kostenlos</td>
+</tr>
+</table>
+
+</div>
+
+<div id="success">
+
+<h2>🎉 Auswahl erfolgreich registriert 🎉</h2>
+
+<p id="selection"></p>
+
+<br>
 
 <p>
-Lieber Sohn,
+Lieber Leonard,
 </p>
 
 <p>
-nach jahrelanger Marktanalyse, mehreren Expertenrunden und
-umfangreichen Investitionen freuen wir uns,
-dir heute ein exklusives <strong>Ärmelkanal Premium-Hemdenabo</strong>
-zu schenken.
+du wurdest erfolgreich in das
+<strong>Ärmelkanal Executive Birthday Program™</strong>
+aufgenommen.
 </p>
 
 <p>
-Bitte wähle dein erstes Hemd aus:
+Dein erstes Premiumhemd wird von unserem
+Logistikpartner
+<strong>Mama & Papa Fashion Group</strong>
+bereitgestellt.
 </p>
 
-<div class="shirts">
+<p>
+Vertragslaufzeit: Unbegrenzt.<br>
+Kündigung: Nicht vorgesehen.<br>
+Preis: Bereits bezahlt.
+</p>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=800" alt="">
-<h3>Business-Kapitän</h3>
-<p>Für wichtige Meetings und Familienfeiern.</p>
-<button onclick="choose()">Dieses Hemd abonnieren</button>
-</div>
+<h3>Herzlichen Glückwunsch zum 24. Geburtstag! 🎂</h3>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800" alt="">
-<h3>Grillmeister Deluxe</h3>
-<p>Autorität am Grillrost inklusive.</p>
-<button onclick="choose()">Dieses Hemd abonnieren</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800" alt="">
-<h3>Karibik-Klaus</h3>
-<p>Urlaubsgefühle ohne Flugticket.</p>
-<button onclick="choose()">Dieses Hemd abonnieren</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?w=800" alt="">
-<h3>Vorstand Freizeit</h3>
-<p>Business Casual auf höchstem Niveau.</p>
-<button onclick="choose()">Dieses Hemd abonnieren</button>
-</div>
-
-</div>
-
-<div id="message">
-🎉 Herzlichen Glückwunsch! 🎉<br><br>
-
-Du hast soeben dein erstes Hemd ausgewählt.<br><br>
-
-Als Geburtstagsgeschenk erhältst du ein exklusives
-<strong>Ärmelkanal Premium-Abo</strong>.<br><br>
-
-Laufzeit: Solange deine Eltern Lust haben.<br>
-Kündigungsfrist: Nicht vorgesehen.<br>
-Preis: Bereits bezahlt. 😎
 </div>
 
 </div>
 
 <footer>
-© Ärmelkanal Premium Fashion Services GmbH*<br>
-<small>*existiert möglicherweise nicht.</small>
+
+ÄRMELKANAL® Premium Shirt Subscription Services
+
+<br><br>
+
+<div class="small">
+Mode verbindet Kontinente seit 2026.
+</div>
+
 </footer>
 
 <script>
-function choose() {
-    document.getElementById("message").style.display = "block";
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
-    });
+
+function choose(shirt){
+
+document.getElementById("selection").innerHTML =
+"Du hast <strong>" + shirt + "</strong> ausgewählt.";
+
+document.getElementById("success").style.display="block";
+
+document.getElementById("success").scrollIntoView({
+behavior:"smooth"
+});
+
 }
 </script>
 
