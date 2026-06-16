@@ -104,7 +104,6 @@ function submitSelection(){
  document.getElementById("success").style.display="block";
  document.getElementById("success").scrollIntoView({behavior:"smooth"});
  const body="Hallo Ärmelkanal Versand,%0D%0A%0D%0Ahiermit möchte ich meine Auswahl für das ÄRMELKANAL Executive Birthday Program bestätigen.:%0D%0A%0D%0A%0D%0A- "+selected.join("%0D%0A- ");
- %0D%0A%0D%0AMit freundlichen Grüssen %0D%0A%0D%0A Leonard
  setTimeout(()=>{
  location.href="mailto:info@aermelkanal.fun?subject=ÄRMELKANAL Hemdenauswahl 2026&body="+body;
  },1000);
